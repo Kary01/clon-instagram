@@ -10,15 +10,17 @@ html{
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
 }
 
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     min-width: 320px;
     height: 55px;
     border-bottom: 1px solid rgba(219, 219, 219, 1);
+    background-color: white;
 }
 
 header .header__nav--logo{
@@ -72,9 +74,9 @@ header .header__nav--logo{
 
 main{
     min-width: 320px;
-    max-width: 760px;
+    max-width: 935px;
+    width: 100%;
     margin: 0 auto;
-    background-color: #fafafa;
 }
 
 main .main-perfil{
@@ -131,17 +133,24 @@ main .main-perfil{
     border-radius: 4px;
 }
 
-.main .main-bio{
+.perfil-info .followers-list{
+    display: none;
+}
+
+.perfil-info .info-bio{
+    display: none;
+}
+
+.main .main-bio .info-bio{
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-width: 320px;
     height: 121px;
     padding: 1em;
-    border-bottom: 1px solid rgba(219,219,219,1);
 }
 
-.main-bio p{
+.info-bio p{
     display: block;
     font-size: 1.4rem;
     line-height: 2rem;
@@ -183,6 +192,8 @@ main .main-feed{
     min-width: 320px;
     height: 45px;
     padding: 1em;
+    border-top: 1px solid rgba(219,219,219,1);
+
 }
 
 .main-feed .feed-list{
@@ -256,6 +267,8 @@ main .main-feed{
     justify-content: center;
     color: white;
     text-align: center;
+    font-size: 1.4rem;
+    vertical-align: middle;
 }
 
 .post:hover .post-overlay{
@@ -271,5 +284,109 @@ main .main-feed{
 
 footer{
     min-width: 320px;
-    height: 80px;
+    max-width: 80%;
+    height: auto;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.footer-info{
+    display: block;
+    text-align: center; 
+}
+
+.info-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 1em 0 0;
+}
+
+.info-list li a{
+    margin: 0 1em;
+    text-decoration: none;
+    color: #8e8e8e;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+.info-list li{
+    color: #8e8e8e;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+@media screen and (min-width: 450px){
+    main .post-list{
+        grid-template: repeat(3, minmax(148px, 148px)) / repeat(3,  minmax(148px, 148px));
+    }
+}
+
+@media screen and (min-width: 735px){
+    main .post-list{
+        grid-template: repeat(3, minmax(214px, 214px)) / repeat(3,  minmax(214px, 214px));
+        gap: 2.8em;
+    }
+    .main-followers{
+        display: none;
+    }
+    .main-perfil{
+        justify-items: center;
+        margin-bottom: 2em;
+    }
+    .main-perfil .perfin-image{
+        width: 150px;
+        height: 150px;
+    }
+    .main-feed{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .perfil-info .followers-list{
+        display: flex;
+        justify-content: space-between;
+        margin: 1em 0;
+    }
+    .main-perfil .perfil-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-perfil .perfil-info button {
+        width: 100px;
+        margin-left: 1em;
+    }
+    main .main-bio{
+        display: none;
+    }
+    .perfil-info .info-bio{
+        display: inline-block;
+        width: 200px;
+    }
+    .perfil-info .info-bio p{
+        font-size: 1.4rem;
+    }
+}
+
+
+@media screen and (min-width: 821px){
+    main .post-list{
+        grid-template: repeat(3, minmax(243px, 243px)) / repeat(3,  minmax(243px, 243px));
+        gap: 2.8em;
+    }
+    .main-feed{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 935px){
+    main .post-list{
+        grid-template: repeat(3, minmax(293px, 243px)) / repeat(3,  minmax(293px, 293px));
+        gap: 2.8em;
+    }
+    .main-feed{
+        max-width: 935px;
+        margin: 0 auto;
+    }
 }
