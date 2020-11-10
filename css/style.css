@@ -71,9 +71,27 @@ main{
     max-width: 760px;
     margin: 0 auto;
 }
+
 main .main-perfil{
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
     min-width: 320px;
-    height: 288px;
+    height: auto;
+    padding: 1em;
+}
+
+.perfil:nth-of-type(2){
+    grid-column: 2 / span 2;
+}
+
+.main-perfil .perfin-image{
+    width: 77px;
+    height: 77px;
+    background-image: url('https://scontent-qro1-1.cdninstagram.com/v/t51.2885-19/s150x150/62137207_2318114871809406_7644261034840031232_n.jpg?_nc_ht=scontent-qro1-1.cdninstagram.com&_nc_ohc=25r8Huq8e_gAX9CppHS&_nc_tp=25&oh=56704138904c206c7de5a182ffe94301&oe=5FD43DD7');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
 }
 
 .post{
