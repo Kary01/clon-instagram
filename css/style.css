@@ -206,10 +206,22 @@ main .main-feed{
     width: 20px;
     height: 20px;
     margin: 0 1em;
+    vertical-align: middle;
+}
+
+.main-feed .feed-list a{
+    color: #8e8e8e;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.main-feed .feed-list a:hover{
+    color: #262626;
+    cursor: pointer;
 }
 
 .feed-list .feed-icon{
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -284,7 +296,7 @@ main .main-feed{
 
 footer{
     min-width: 320px;
-    max-width: 80%;
+    max-width: 900px;
     height: auto;
     margin: 2em auto;
     padding: 1em;
@@ -366,6 +378,18 @@ footer{
     .perfil-info .info-bio p{
         font-size: 1.4rem;
     }
+    .main-feed .feed-post::after{
+        content: "PUBLICACIONES";
+    }
+    .main-feed .feed-igtv::after{
+        content: "IGTV";
+    }
+    .main-feed .feed-bookmark::after{
+        content: "GUARDADO";
+    }
+    .main-feed .feed-tags::after{
+        content: "ETIQUETADAS";
+    }
 }
 
 
@@ -388,5 +412,8 @@ footer{
     .main-feed{
         max-width: 935px;
         margin: 0 auto;
+    }
+    .perfil-info .followers-list{
+        width: 500px;
     }
 }
