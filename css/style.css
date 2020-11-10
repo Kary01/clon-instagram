@@ -8,6 +8,10 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -102,9 +106,10 @@ main .main-perfil{
 .main-perfil .perfil-info p{
     font-size: 2.8rem;
     margin-bottom: .5em;
+    color: #262626;
 }
 
-.icon--options{
+.icon-options{
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -118,9 +123,59 @@ main .main-perfil{
     display: inline-block;
     width: 100%;
     height: 30px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #262626;
     background-color: transparent;
     border: 1px solid rgba(219,219,219,1);
     border-radius: 4px;
+}
+
+.main .main-bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 320px;
+    height: 121px;
+    padding: 1em;
+    border-bottom: 1px solid rgba(219,219,219,1);;
+}
+
+.main-bio p{
+    display: block;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #262626;
+}
+
+.main-bio p:nth-of-type(1){
+    font-weight: 600;
+}
+
+main .main-followers{
+    min-width: 320px;
+    height: 60px;
+    padding: 1em;
+}
+
+.followers-list{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+}
+
+.followers-list li{
+    margin: 0 1em;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #8e8e8e;
+}
+
+.followers-list li span{
+    font-weight: 600;
+    color: #262626;
 }
 .post{
     display: block;
