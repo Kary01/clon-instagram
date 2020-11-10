@@ -9,7 +9,63 @@ html{
 }
 
 body{
+}
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 320px;
+    height: 55px;
+    margin: 0 2em;
+    border-bottom: 1px solid rgba(219, 219, 219, 1);
+}
+
+header .header__nav--logo{
+    width: 100px;
+    height: 30px;
+    background-image: url('../assets/icons/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header__nav--list{
+    width: 200px;
+}
+
+.header__nav--list span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 1em;
+}
+
+.header__nav--list .nav--icon{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header__nav--list .icon-home{
+    background-image: url('../assets/icons/home.svg');
+}
+
+.header__nav--list .icon-explore{
+    background-image: url('../assets/icons/compass.svg');
+}
+
+.header__nav--list .icon-msg{
+    background-image: url('../assets/icons/send.svg');
+}
+
+.header__nav--list .icon-like{
+    background-image: url('../assets/icons/heart.svg');
+}
+
+.header__nav--list .icon-user{
+    background-image: url('https://scontent-qro1-1.cdninstagram.com/v/t51.2885-19/s150x150/62137207_2318114871809406_7644261034840031232_n.jpg?_nc_ht=scontent-qro1-1.cdninstagram.com&_nc_ohc=25r8Huq8e_gAX9CppHS&_nc_tp=25&oh=56704138904c206c7de5a182ffe94301&oe=5FD43DD7');
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .post{
@@ -29,9 +85,9 @@ body{
 
 .post-list{
     display: grid;
-    grid-template: repeat(3, minmax(100px, 293px)) / repeat(3, minmax(100px, 293px));
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     gap: 2.8rem;
-    height: 100%;
+    height: auto;
     justify-content: center;
     align-content: center;
 }
