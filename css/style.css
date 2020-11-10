@@ -138,7 +138,7 @@ main .main-perfil{
     min-width: 320px;
     height: 121px;
     padding: 1em;
-    border-bottom: 1px solid rgba(219,219,219,1);;
+    border-bottom: 1px solid rgba(219,219,219,1);
 }
 
 .main-bio p{
@@ -156,6 +156,7 @@ main .main-followers{
     min-width: 320px;
     height: 60px;
     padding: 1em;
+    border-bottom: 1px solid rgba(219,219,219,1);
 }
 
 .followers-list{
@@ -177,6 +178,48 @@ main .main-followers{
     font-weight: 600;
     color: #262626;
 }
+
+main .main-feed{
+    min-width: 320px;
+    height: 45px;
+    padding: 1em;
+}
+
+.main-feed .feed-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-list span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 1em;
+}
+
+.feed-list .feed-icon{
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.feed-list .icon-post{
+    background-image: url('../assets/icons/grid.svg');
+}
+
+.feed-list .icon-igtv{
+    background-image: url('../assets/icons/tv.svg');
+}
+
+.feed-list .icon-save{
+    background-image: url('../assets/icons/bookmark.svg');
+}
+
+.feed-list .icon-tags{
+    background-image: url('../assets/icons/tag.svg');
+}
+
 .post{
     display: block;
     position: relative;
@@ -224,4 +267,9 @@ main .main-followers{
     width: 1em;
     margin: .5em;
     font-weight: bold;
+}
+
+footer{
+    min-width: 320px;
+    height: 80px;
 }
